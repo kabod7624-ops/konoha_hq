@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قوانين كونوها 🍃</title>
+    <!-- الخطوط والأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-overlay"></div>
+
+    <!-- الشريط العلوي الرئيسي -->
+    <header class="main-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fa-solid fa-leaf"></i>
+                <span>KONOHA</span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                <a href="titles.html" class="nav-link"><i class="fa-solid fa-crown"></i> الألقاب</a>
+                <a href="rules.html" class="nav-link active"><i class="fa-solid fa-gavel"></i> القوانين</a>
+            </nav>
+            <button class="toggle-sidebar-btn" id="openSidebarBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية للموبايل -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-leaf"></i>
+                <span>قرية كونوها</span>
+            </div>
+            <button class="close-sidebar-btn" id="closeSidebarBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="sidebar-links">
+            <a href="index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> الرئيسية</a>
+            <a href="titles.html" class="sidebar-link"><i class="fa-solid fa-crown"></i> الألقاب المحجوزة</a>
+            <a href="rules.html" class="sidebar-link active"><i class="fa-solid fa-gavel"></i> قوانين كونوها</a>
+        </nav>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- محتوى الصفحة الرئيسي -->
+    <div class="main-wrapper rules-wrapper">
+        <header class="page-header">
+            <div class="header-badge"><i class="fa-solid fa-leaf"></i></div>
+            <h1 class="page-title">قوانين قرية كونوها</h1>
+            <p class="page-sub">أهلاً وسهلاً بكم في كونوها • يرجى الالتزام بالدستور لضمان استمرارك</p>
+        </header>
+
+        <!-- قسم التنبيهات السريعة -->
+        <div class="alert-box">
+            <div class="alert-item"><i class="fa-solid fa-triangle-exclamation"></i> 4 إنذارات = طرد لمدة يومين</div>
+            <div class="alert-item danger"><i class="fa-solid fa-skull"></i> 6 إنذارات = طرد مؤبد</div>
+            <div class="alert-item info"><i class="fa-solid fa-clock-rotate-left"></i> تنحذف الإنذارات تلقائياً بعد 3 أيام</div>
+        </div>
+
+        <!-- 1️⃣ المخالفات والإنذارات -->
+        <section class="rules-section">
+            <h2 class="section-title warning-title">
+                <i class="fa-solid fa-triangle-exclamation"></i> المخالفات والإنذارات
+            </h2>
+            <div class="rules-grid">
+                <div class="rule-box"><span class="rule-num">1</span> إرسال GIF خارج إطار الأنمي.</div>
+                <div class="rule-box"><span class="rule-num">2</span> يمنع إرسال ملصقات الكيبوب أو الأرمي أو ملصقات مخلة بالأدب.</div>
+                <div class="rule-box"><span class="rule-num">3</span> إرسال 3 ملصقات متتالية بدون رسائل يعتبر سبام.</div>
+                <div class="rule-box"><span class="rule-num">4</span> إرسال 9 رسائل متتالية منها 3 بدون فائدة يعتبر سبام.</div>
+                <div class="rule-box"><span class="rule-num">5</span> السبام والتشفير بجميع أنواعه.</div>
+                <div class="rule-box"><span class="rule-num">6</span> التحدث عن الهنتاي والإيتشي.</div>
+                <div class="rule-box"><span class="rule-num">7</span> العنصرية بكل أشكالها.</div>
+                <div class="rule-box"><span class="rule-num">8</span> التحدث في الأمور السياسية وما شابهها.</div>
+                <div class="rule-box"><span class="rule-num">9</span> الاحتكاك غير اللائق بين الجنسين في العام أو الخاص.</div>
+                <div class="rule-box"><span class="rule-num">10</span> التحدث عن حلقة جديدة لم يمر عليها 7 ساعات (حرق).</div>
+                <div class="rule-box"><span class="rule-num">11</span> التنمر على الأعضاء.</div>
+                <div class="rule-box"><span class="rule-num">12</span> إرسال التسجيلات الصوتية للبنات.</div>
+                <div class="rule-box"><span class="rule-num">13</span> إرسال الصوتيات عالية الصوت أو المزعجة.</div>
+                <div class="rule-box"><span class="rule-num">14</span> إرسال مقطع خارج الأنمي في غير الأيام المخصصة (اليوم المفتوح).</div>
+                <div class="rule-box"><span class="rule-num">15</span> تعمد الحذف للرسائل.</div>
+                <div class="rule-box"><span class="rule-num">16</span> طلب الرتب وإزعاج المسؤولين.</div>
+                <div class="rule-box"><span class="rule-num">17</span> التحدث بغير اللهجة العامة أو التحدث بغير اللغة العربية.</div>
+                <div class="rule-box"><span class="rule-num">18</span> النقاشات الخارجية عن الأنمي غير مسموحة إلا باليوم المحدد.</div>
+            </div>
+        </section>
+
+        <!-- 2️⃣ قوانين الطرد المؤقت -->
+        <section class="rules-section">
+            <h2 class="section-title temp-title">
+                <i class="fa-solid fa-user-clock"></i> قوانين الطرد المؤقت
+            </h2>
+            <div class="rules-grid">
+                <div class="rule-box temp-box"><span class="rule-num">1</span> الاحتكاك غير اللائق بين الجنسين بالخاص أو العام.</div>
+                <div class="rule-box temp-box"><span class="rule-num">2</span> الاعتراض على قرارات المشرفين والتدخل في شؤونهم.</div>
+            </div>
+            <div class="section-note">
+                <i class="fa-solid fa-circle-exclamation"></i> <strong>ملاحظة:</strong> حصولك على طردين مؤقتين يتحول تلقائياً إلى طرد مؤبد!
+            </div>
+        </section>
+
+        <!-- 3️⃣ قوانين الطرد المؤبد -->
+        <section class="rules-section">
+            <h2 class="section-title ban-title">
+                <i class="fa-solid fa-ban"></i> قوانين الطرد المؤبد
+            </h2>
+            <div class="rules-grid">
+                <div class="rule-box ban-box"><span class="rule-num">1</span> الحرق بجميع صوره وأشكاله.</div>
+                <div class="rule-box ban-box"><span class="rule-num">2</span> النشر والتسويق لقروبات أخرى.</div>
+                <div class="rule-box ban-box"><span class="rule-num">3</span> إرسال أي صورة، مقطع، أو ملصق هنتاي.</div>
+                <div class="rule-box ban-box"><span class="rule-num">4</span> الدخول بنية التخريب أو سرقة الأعضاء.</div>
+                <div class="rule-box ban-box"><span class="rule-num">5</span> تهديد الاعضاء بالباند أو حظر الحسابات.</div>
+                <div class="rule-box ban-box"><span class="rule-num">6</span> السب والشتم المباشر.</div>
+                <div class="rule-box ban-box"><span class="rule-num">7</span> إرسال أكثر من ملصق دفعة واحدة بنفس الوقت.</div>
+                <div class="rule-box ban-box"><span class="rule-num">8</span> إرسال صورتك الشخصية أو صورة أي عضو/شخص بالقروب.</div>
+                <div class="rule-box ban-box"><span class="rule-num">9</span> افتعال مشاكل متعمدة بالنقابة.</div>
+                <div class="rule-box ban-box"><span class="rule-num">10</span> الإساءة أو الابتزاز بالخاص والاشتکاء عليك.</div>
+                <div class="rule-box ban-box"><span class="rule-num">11</span> إرسال صور أو مقاطع غير لائقة (أنمي أو غير أنمي).</div>
+                <div class="rule-box ban-box"><span class="rule-num">12</span> يمنع النشر في الواتساب.</div>
+                <div class="rule-box ban-box"><span class="rule-num">13</span> تعدد الممالك.</div>
+                <div class="rule-box ban-box"><span class="rule-num">14</span> التطقيم بين ولد وبنت.</div>
+            </div>
+        </section>
+
+        <!-- تحذير وتنبيه هام -->
+        <div class="admin-notice">
+            <h3><i class="fa-solid fa-shield-cat"></i> تنبيهات الإدارة العليا</h3>
+            <ul>
+                <li>يحق للمشرف طردك مؤبداً مباشرة عند تكرار نفس الإنذارات.</li>
+                <li>إذا لزم الأمر، يحق للمشرف تطبيق قانون غير مذكور وفق ما يراه مناسباً لصالح القرية.</li>
+            </ul>
+        </div>
+
+        <footer class="footer-note">
+            مع تحيات إدارة كونوها 🍃
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

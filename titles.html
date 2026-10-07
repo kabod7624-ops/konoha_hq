@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الألقاب المحجوزة | مقر يامي</title>
+    <!-- الخطوط والأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-overlay"></div>
+
+    <div class="main-wrapper">
+        <!-- زر العودة للصفحة الرئيسية -->
+        <div class="top-bar">
+            <a href="index.html" class="btn-back">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>العودة للمقر الرئيسي</span>
+            </a>
+        </div>
+
+        <!-- هيدر صفحة الألقاب -->
+        <header class="page-header">
+            <div class="header-badge"><i class="fa-solid fa-crown"></i></div>
+            <h1 class="page-title">الألقاب المأخوذة</h1>
+            <p class="page-sub">تأكد من اختيار لقب غير موجود في هذه القائمة قبل تعبئة الاستمارة</p>
+        </header>
+
+        <!-- حقل البحث السريع عن الألقاب -->
+        <div class="search-box-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="titleSearchInput" onkeyup="filterTitles()" placeholder="ابحث عن لقب أو حرف هنا...">
+        </div>
+
+        <!-- شبكة الألقاب مقسمة حسب الأحرف -->
+        <div class="titles-container" id="titlesContainer">
+
+            <!-- حرف أ -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ أ</div>
+                <div class="titles-list">
+                    <span class="title-chip">اندريه ❄️</span>
+                    <span class="title-chip">ايسديث ❄️</span>
+                    <span class="title-chip">اوراراكا 👽</span>
+                    <span class="title-chip">ايتادوري 🌪️</span>
+                    <span class="title-chip">الليتش</span>
+                </div>
+            </div>
+
+            <!-- حرف ب -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ب</div>
+                <div class="titles-list">
+                    <span class="title-chip">باجي 👑</span>
+                    <span class="title-chip">باتشيرا ♟️</span>
+                </div>
+            </div>
+
+            <!-- حرف ت -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ت</div>
+                <div class="titles-list">
+                    <span class="title-chip">تايجو 🦁</span>
+                    <span class="title-chip">توشيرو</span>
+                </div>
+            </div>
+
+            <!-- حرف ث -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ث</div>
+                <div class="titles-list">
+                    <span class="title-chip">ثراغ ⚡</span>
+                </div>
+            </div>
+
+            <!-- حرف ج -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ج</div>
+                <div class="titles-list">
+                    <span class="title-chip">جاستر 🎼</span>
+                    <span class="title-chip">غيو 〽️</span>
+                    <span class="title-chip">جون سنو ❄️</span>
+                </div>
+            </div>
+
+            <!-- حرف د -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ د</div>
+                <div class="titles-list">
+                    <span class="title-chip">دوما 🍻</span>
+                    <span class="title-chip">دون فريكس 🎭</span>
+                    <span class="title-chip">دازاي 🕳️</span>
+                </div>
+            </div>
+
+            <!-- حرف ر -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ر</div>
+                <div class="titles-list">
+                    <span class="title-chip">ريو كين ⚔️</span>
+                    <span class="title-chip">روكيا 🍓</span>
+                    <span class="title-chip">رينتارو</span>
+                    <span class="title-chip">ريلي</span>
+                </div>
+            </div>
+
+            <!-- حرف ز -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ز</div>
+                <div class="titles-list">
+                    <span class="title-chip">زاوفان المز 🍁</span>
+                    <span class="title-chip">زينون 🧠</span>
+                </div>
+            </div>
+
+            <!-- حرف س -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ س</div>
+                <div class="titles-list">
+                    <span class="title-chip">ساسكي 🌖</span>
+                    <span class="title-chip">ساتورو ❄️</span>
+                    <span class="title-chip">ساني 🫆</span>
+                </div>
+            </div>
+
+            <!-- حرف ش -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ش</div>
+                <div class="titles-list">
+                    <span class="title-chip">شيدو 🕷️</span>
+                    <span class="title-chip">شينوبو</span>
+                </div>
+            </div>
+
+            <!-- حرف غ -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ غ</div>
+                <div class="titles-list">
+                    <span class="title-chip">غوجو 🧭</span>
+                    <span class="title-chip">غوكو 🔱</span>
+                    <span class="title-chip">غيتو ☁️</span>
+                </div>
+            </div>
+
+            <!-- حرف ف -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ف</div>
+                <div class="titles-list">
+                    <span class="title-chip">فورينا 🧊</span>
+                    <span class="title-chip">الفاريا ☃️</span>
+                    <span class="title-chip">فريرين</span>
+                </div>
+            </div>
+
+            <!-- حرف ك -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ك</div>
+                <div class="titles-list">
+                    <span class="title-chip">كيلوا 🩵</span>
+                    <span class="title-chip">كينجاكو ⛩️</span>
+                    <span class="title-chip">كاغويا</span>
+                    <span class="title-chip">كيمارو</span>
+                </div>
+            </div>
+
+            <!-- حرف م -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ م</div>
+                <div class="titles-list">
+                    <span class="title-chip">ميهوك 🍷</span>
+                    <span class="title-chip">ميغومي 🍂</span>
+                    <span class="title-chip">ميكاسا 🎈</span>
+                </div>
+            </div>
+
+            <!-- حرف ن -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ن</div>
+                <div class="titles-list">
+                    <span class="title-chip">نانامي 🩸</span>
+                    <span class="title-chip">ناغومو 💨</span>
+                    <span class="title-chip">نيكوماتا</span>
+                    <span class="title-chip">نانامي (بنت)</span>
+                    <span class="title-chip">نامي</span>
+                </div>
+            </div>
+
+            <!-- حرف هـ -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ هـ</div>
+                <div class="titles-list">
+                    <span class="title-chip">هاياتو 💎</span>
+                    <span class="title-chip">هيناتا 🍒</span>
+                </div>
+            </div>
+
+            <!-- حرف و -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ و</div>
+                <div class="titles-list">
+                    <span class="title-chip">واغوري 🎀</span>
+                </div>
+            </div>
+
+            <!-- حرف ي -->
+            <div class="letter-group">
+                <div class="letter-header">☀️ ي</div>
+                <div class="titles-list">
+                    <span class="title-chip">يوي 🌺</span>
+                    <span class="title-chip">يو 🔥</span>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer-note">
+            K.N.H ⊰🔆⊱ ATOMIC • المصمم: Furina 🫐
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

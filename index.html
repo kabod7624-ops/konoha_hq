@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مقر الاستقبال الرئيسي لمجموعة الثيران السوداء - YAMI SUKEHIRO">
+    <title>『 YAMI SUKEHIRO 』| مقر الثيران السوداء</title>
+
+    <!-- Google Fonts: خط Cairo للعناوين والنصوص الاحترافية + خط Cinzel للأسماء اللاتينية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 (الأيقونات الاحترافية) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- ربط ملف التنسيق المخصص -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- الشريط العلوي navbar -->
+<header class="main-navbar">
+    <div class="nav-container">
+        <!-- زر فتح القائمة الجانبية للموبايل -->
+        <button class="toggle-sidebar-btn" id="openSidebarBtn" aria-label="فتح القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- شعار الموقع -->
+        <a href="index.html" class="nav-brand">
+            <i class="fas fa-book-bookmark"></i>
+            <span>BookShelves</span>
+        </a>
+
+        <!-- روابط التنقل الرئيسية (تظهر بالشاشات الكبيرة) -->
+        <nav class="desktop-nav">
+            <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> الرئيسية</a>
+            <a href="Home.html" class="nav-link"><i class="fas fa-store"></i> المتجر</a>
+            <a href="titles.html" class="nav-link"><i class="fas fa-award"></i> الألقاب</a>
+            <a href="rules.html" class="nav-link"><i class="fas fa-scroll"></i> القوانين</a>
+        </nav>
+
+        <!-- زر البروفايل أو تسجيل الدخول -->
+        <div class="nav-actions">
+            <a href="profile.html" class="nav-profile-btn" title="الملف الشخصي">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- القائمة الجانبية (Sidebar) للموبايل والشاشات الصغيرة -->
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-brand">
+            <i class="fas fa-book-bookmark"></i>
+            <span>BookShelves</span>
+        </div>
+        <button class="close-sidebar-btn" id="closeSidebarBtn">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <nav class="sidebar-links">
+        <a href="index.html" class="sidebar-link active">
+            <i class="fas fa-home"></i> <span>الرئيسية</span>
+        </a>
+        <a href="Home.html" class="sidebar-link">
+            <i class="fas fa-store"></i> <span>المتجر</span>
+        </a>
+        <a href="titles.html" class="sidebar-link">
+            <i class="fas fa-award"></i> <span>الألقاب المحجوزة</span>
+        </a>
+        <a href="rules.html" class="sidebar-link">
+            <i class="fas fa-scroll"></i> <span>دستور وقوانين القناة</span>
+        </a>
+        <a href="profile.html" class="sidebar-link">
+            <i class="fas fa-user"></i> <span>الملف الشخصي</span>
+        </a>
+    </nav>
+</aside>
+    <!-- خلفية الهالة البنفسجية والخلفية المضيئة -->
+    <div class="bg-overlay"></div>
+
+
+<!-- خلفية مظلمة عند فتح الـ Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="main-wrapper">
+        <!-- =========================================================
+             قسم الهيدر الرئيسي (Header Section)
+             ========================================================= -->
+        <header class="hero-header">
+            <!-- إطار صورة البروفايل مع هالة نيون متحركة -->
+            <div class="profile-container">
+                <div class="avatar-glow"></div>
+                <img src="yami_profile.jpg" alt="Yami Sukehiro" class="avatar-img">
+            </div>
+
+            <!-- اسم الشخصية واللقب بتأثير نيون فريد -->
+            <h1 class="hero-title" data-text="YAMI SUKEHIRO">YAMI SUKEHIRO</h1>
+            <p class="hero-subtitle">
+                <span class="badge-bulls">♣️ BLACK BULLS</span>
+                <span class="divider">•</span>
+                مقر الاستقبال الرئيسي
+            </p>
+
+            <!-- كارت الاقتباس الشهير مع حدود مضيئة -->
+            <div class="quote-container">
+                <i class="fa-solid fa-quote-right quote-icon"></i>
+                <p class="quote-text">"تخطّ حدودك هنا والآن.. أو ارحل!"</p>
+            </div>
+        </header>
+                <!-- =========================================================
+             2. قسم استمارة المدخلات التفاعلية (Interactive Form)
+             ========================================================= -->
+        <section class="form-card-section">
+            <div class="form-card-header">
+                <div class="icon-badge">
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+                <div>
+                    <h3 class="form-card-title">تعبئة استمارة الانضمام</h3>
+                    <p class="form-card-sub">أدخل بياناتك للانتقال مباشرة للمجموعة</p>
+                </div>
+            </div>
+
+            <!-- حقول إدخال البيانات -->
+            <form id="joinForm" onsubmit="handleFormSubmit(event)" class="interactive-form">
+                <div class="input-group">
+                    <label><i class="fa-solid fa-user"></i> الاسم / اللقب</label>
+                    <input type="text" id="userName" placeholder="مثال: يامي / أبو جمال" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-cake-candles"></i> العمر</label>
+                    <input type="number" id="userAge" placeholder="مثال: 20" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-earth-americas"></i> البلد</label>
+                    <input type="text" id="userCountry" placeholder="مثال: سوريا" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fa-solid fa-mask"></i> الشخصية المفضلة</label>
+                    <input type="text" id="userChar" placeholder="مثال: Yami Sukehiro" required>
+                </div>
+
+                <!-- زر الإرسال والدخول -->
+                <button type="submit" class="btn-submit-whatsapp">
+                    <i class="fa-brands fa-whatsapp fa-xl"></i>
+                    <span>إرسال الاستمارة والدخول للمجموعة</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- التذييل -->
+        <footer class="footer-note">
+            صلي على سيدنا محمد ﷺ • أهلاً بك في المقر
+        </footer>
+    </div>
+</body>
+</html>
