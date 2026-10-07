@@ -62,3 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
         typeEffect();
     }
 });
+// تفعيل زر القائمة للجوال
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.querySelector('.menu-toggle') || document.querySelector('.fa-bars');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+});

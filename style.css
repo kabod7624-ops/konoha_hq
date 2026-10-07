@@ -1520,3 +1520,128 @@ body::after {
         filter: brightness(1.25) drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
     }
 }
+/* =========================================================
+   إصلاح شريط التنقل وروابط الصفحات لشاشات الجوال
+   ========================================================= */
+
+@media (max-width: 768px) {
+    /* إظهار الروابط بشكل شريطي أفقي مرن تحت الهيدر */
+    .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+        padding: 10px 0 !important;
+        background: rgba(18, 18, 26, 0.85) !important;
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 1px solid rgba(168, 85, 247, 0.2) !important;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem !important;
+        padding: 6px 12px !important;
+        background: rgba(168, 85, 247, 0.1) !important;
+        border: 1px solid rgba(168, 85, 247, 0.3) !important;
+        border-radius: 8px !important;
+        color: #fff !important;
+        white-space: nowrap !important;
+    }
+
+    /* إخفاء أيقونة القائمة الثلاثية إذا كانت الروابط معروضة بالكامل */
+    .menu-toggle, .hamburger-icon, .fa-bars {
+        display: none !important;
+    }
+}
+/* =========================================================
+   إظهار شريط التنقل وروابط الصفحات دائماً لجميع الشاشات
+   ========================================================= */
+
+/* 1. إلغاء إخفاء قائمة الروابط في جميع أحجام الشاشات */
+.nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* 2. تنسيق زر القائمة الثلاثية (إخفاؤه لعدم الحاجة إليه) */
+.menu-toggle, 
+.hamburger, 
+.fa-bars,
+[class*="menu"] {
+    display: none !important;
+}
+
+/* 3. تجاوب الروابط عند تصغير الشاشة أو على الجوال */
+@media (max-width: 768px) {
+    .navbar, nav {
+        flex-direction: column !important;
+        gap: 10px !important;
+        padding: 10px !important;
+    }
+
+    .nav-links {
+        justify-content: center !important;
+        width: 100% !important;
+        flex-wrap: wrap !important;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem !important;
+        padding: 6px 14px !important;
+        background: rgba(168, 85, 247, 0.15) !important;
+        border: 1px solid rgba(168, 85, 247, 0.35) !important;
+        border-radius: 8px !important;
+        color: #fff !important;
+        white-space: nowrap !important;
+    }
+}
+/* =========================================================
+   شريط تنقل ثابت وبارز حتمي (ضمان الإظهار على الجوال واللابتوب)
+   ========================================================= */
+
+/* إنشاء شريط أزرار تنقل سريع ثابت للجوال واللابتوب المصغر */
+@media (max-width: 900px) {
+    /* 1. إخفاء أي قائمة منسدلة قديمة قد تسبب تعارضاً */
+    .menu-toggle, .hamburger, .fa-bars {
+        display: none !important;
+    }
+
+    /* 2. تحويل جميع روابط التنقل إلى شريط نيون أفقي أعلى الصفحة */
+    .nav-links, nav ul, header nav {
+        display: flex !important;
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        background: transparent !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 8px 0 !important;
+        margin-top: 10px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+
+    .nav-links a, nav a {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 6px 12px !important;
+        background: rgba(168, 85, 247, 0.2) !important;
+        border: 1px solid rgba(168, 85, 247, 0.5) !important;
+        border-radius: 20px !important;
+        color: #ffffff !important;
+        font-size: 0.8rem !important;
+        font-weight: bold !important;
+        text-decoration: none !important;
+        box-shadow: 0 0 10px rgba(168, 85, 247, 0.2) !important;
+    }
+}
